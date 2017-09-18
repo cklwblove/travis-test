@@ -15,8 +15,8 @@ cache:
   - $HOME/.yarn-cache
 
 script:
-  - npm run build
-  - npm run gen:docs
+  #- npm run build
+  #- npm run gen:docs
 
 after_script:
   #- cd ./src
