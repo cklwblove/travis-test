@@ -12,7 +12,5 @@ node_modules
 .idea
 .project
 .happypack
-deploy-docs.sh
 docs/fonts/
-*jsdoc.json
 yarn.lock
