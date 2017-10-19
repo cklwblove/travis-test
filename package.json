@@ -22,7 +22,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^2.0.1",
     "html-webpack-plugin": "^2.19.0",
-    "jsdoc": "^3.5.4",
+    "jsdoc": "3.6.0-dev",
     "power-assert": "^1.4.2",
     "rollup": "^0.41.4",
     "rollup-plugin-buble": "^0.14.0",
