@@ -1,7 +1,7 @@
 {
-  "name": "travis-test2017",
+  "name": "cloud-utils",
   "description": "A collection of utils",
-  "version": "1.0.0",
+  "version": "1.1.3",
   "author": {
     "name": "liwb",
     "email": "lwbhtml@163.com"
@@ -31,12 +31,10 @@
     "uglify-js": "^2.7.5"
   },
   "files": [
-    "dist/travis-test.js",
-    "dist/travis-test.min.js",
-    "dist/travis-test.common.js",
+    "dist/*.js",
     "src"
   ],
-  "main": "dist/travis-test.js",
+  "main": "dist/cloud-utils.js",
   "keywords": [
     "utils"
   ],
@@ -46,9 +44,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cklwblove/travis-test.git"
+    "url": "git+https://github.com/cloud-templates/cloud-utils.git"
   },
   "scripts": {
-
+    "build": "node build/build.js",
+    "gen:docs": "./node_modules/.bin/jsdoc -c jsdoc.json",
+    "docs:deploy": "bash ./deploy-docs.sh",
+    "lint": "eslint --fix .js src",
+    "deploy": "sh build/release.sh"
   }
 }
