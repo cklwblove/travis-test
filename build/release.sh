@@ -1,20 +1,8 @@
 #!/bin/bash
 
-set -e
-echo "Enter release version: "
-read VERSION
+npm run build && npm run docs:deploy
+git add -A
+git commit -m "[build] 1.1.0"
+npm version 1.1.0 --message "[release] 1.1.0"
 
-read -p "Releasing $VERSION - are you sure (y/n)" -n 1 -r
-echo #
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-  echo "Releasing $VERSION ..."
-
-  VERSION=$VERSION npm run build && npm run docs:deploy
-  git add -A
-  git commit -m "[build] $VERSION"
-  npm version $VERSION --message "[release] $VERSION"
-
-  git push
-  npm publish
-fi
+#git push
