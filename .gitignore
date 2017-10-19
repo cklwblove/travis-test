@@ -15,9 +15,5 @@ node_modules
 .happypack
 deploy-docs.sh
 docs/fonts/
-README.md
-jsdoc.json
-src/core/
-src/main.default.js
-src/main.js
+*jsdoc.json
 yarn.lock
